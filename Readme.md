@@ -11,7 +11,7 @@ matricula: "581759"
 pipx install tko
 
 # Instalando algumas extensões úteis
-code --install-extension ms-python.python
+code --install -extension ms-python.python
 code --install-extension usernamehw.errorlens
 code --install-extension jeff-hughes.open-terminal-here
 
