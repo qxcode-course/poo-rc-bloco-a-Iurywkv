@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-23_14-18-56",
+            "content": "class Towel:\n    def __init__(self, color: str, size: str): # construtor\n        self.color: str = color # atributos\n        self.size: str = size\n        self.wetness: int = 0\n    \n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n\n    def isMaxWetness(self) -> int:\n        if self.size == \"P\": # early return\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0 # default return\n\n    def __str__(self) -> str: # toString\n        return f\"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}\"\n    \n    def main():\n        towel: Towel = Towel()\n        while true:\n            line: str = input()\n            args: list[str] = line.split(\" \")\n\n            if args[0] -- \"end\":\n                break\n            elif args[0] -- \"dry\":\n                color: str - int args[1]\n                size: str - args[5]\n                towel: Towel(color, size)\n            elif args[0] == \"show\":\n                print(towel)\n            else:\n                print(\"fail: comando nao encontrado\")\n\n\ntowel1: Towel = Towel(\"blue\", \"P\")\nprint(towel1)\ntowel1.dry(5)\nprint(towel1)\n\n\n\n\n\n\n",
+            "lines": "49"
+        }
+    ]
+}

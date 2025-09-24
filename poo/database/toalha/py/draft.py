@@ -1,5 +1,5 @@
 class Towel:
-    def __init__(self, color: str, size: str): # construtor
+    def __init__(self, color: str = "", size: str = ""): # construtor
         self.color: str = color # atributos
         self.size: str = size
         self.wetness: int = 0
@@ -18,32 +18,30 @@ class Towel:
 
     def __str__(self) -> str: # toString
         return f"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}"
-    
-    def main():
-        towel: Towel = Towel()
-        while true:
-            line: str = input()
-            args: list[str] = line.split(" ")
 
-            if args[0] -- "end":
-                break
-            elif args[0] -- "dry":
-                color: str - int args[1]
-                size: str - args[5]
-                towel: Towel(color, size)
-            elif args[0] == "show":
-                print(towel)
-            else:
-                print("fail: comando nao encontrado")
+# ------------------------------------------ 
+def main():
+    towel: Towel = Towel()
 
+    while True:
+        line: str = input()
+        args: list[str] = line.split(" ")
 
-towel1: Towel = Towel("blue", "P")
-print(towel1)
-towel1.dry(5)
-print(towel1)
+        if args[0] == "end":
+            break
+        elif args[0] == "new":
+            color: str = args[1]
+            size: str = args[2]
+            towel = Towel(color, size)
+        elif args[0] == "show":
+            print(towel)
+        else:
+            print("fail: comando nao encontrado")
 
 
 
 
 
 
+
+ 
